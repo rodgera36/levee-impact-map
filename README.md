@@ -59,11 +59,10 @@ flood_risk_app/
 | **HUC level toggle** | Switches boundary display between HUC-2/4/8/12 from USGS NHD |
 | **Flood scenario** | Filters FEMA zones: 25yr=X, 100yr=AE, 500yr=X500, failure=AE+A99 |
 | **Levee-protected** | Shows FEMA Zone A99 polygons (levee-protected areas under NFIP) |
-| **Levee-impacted** | Buffer zone around NLD levee centerlines (configurable 100–2000m) |
+| **Levee-impacted** | Buffer zone around NLD levee centerlines (configurable 100–2000m) to represent "back flooding" areas |
 | **NLCD layer** | MRLC WMS tile overlay (2021 land cover) |
-| **FEMA flood zones** | FIRM polygons from FEMA ArcGIS Feature Service |
-| **Census choropleth** | ACS5 tract-level demographics (pop, income, race, housing) |
-| **Custom extent** | Upload a .geojson or .gpkg to overlay your own flood scenario |
+| **Census Data Outputs** | ACS5 tract-level demographics (pop, income, race, housing) |
+| **Custom extent** | Upload a .geojson or .gpkg to overlay your own flood scenario (will be added at a later point) |
 
 ---
 
@@ -72,7 +71,6 @@ flood_risk_app/
 | Layer | Source | Access method |
 |-------|--------|---------------|
 | NLCD 2021 | MRLC (USFS/USGS) | WMS tiles |
-| FEMA FIRM | FEMA Map Service Center | ArcGIS REST Feature Service |
 | National Levee Database | USACE | REST API |
 | HUC boundaries | USGS NHD Plus | ArcGIS REST + GeoJSON |
 | Census ACS5 | US Census Bureau | `tidycensus` package |
@@ -93,6 +91,7 @@ flood_risk_app/
 
 ## Notes on FEMA flood scenario mapping
 
+This layers will be added at a later point to help the user analyze FEMA floodplains versus flood modeling outputs.
 The app maps flood return periods to FEMA FIRM zone codes:
 
 | Scenario | FIRM zones shown |
