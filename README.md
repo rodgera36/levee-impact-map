@@ -1,8 +1,21 @@
 # Flood Risk Explorer — R Shiny App
 
-Interactive flood risk visualization for a single HUC2 basin, with toggleable
-HUC levels (2/4/8/12), NLCD land cover, FEMA FIRM flood zones, National Levee
+Interactive flood risk visualization, with toggleable HUC levels (2/4/8/12), NLCD land cover, National Levee
 Database layers, Census demographics, and flood scenario overlays.
+
+---
+## How to use
+### 1. Zoom to area of interest
+### 2. Select HUC level of interest
+### 3. Click "Load Layers of Current View" - Will load HUC boundaries within your zoomed in area. This may take a minute to load
+### 4. Click on the specific HUC of interest. You may need to a wait for census data to load
+This app is dynamically pulling from multiple online databases. It may take 30-60sec for each step to load
+
+---
+This app is an initial visualization tool for additional flood impact analysis due to undocumented levees. The full app will eventually include:
+* Undocumented levee crests (lines) and footprints (polygons)
+* Estimated protected and impacted (backwater) areas as a result of these structures
+* Flood scenarios at 25-, 50-, 100-, and 500- year flood events along with levee structure failure thresholds and impacts
 
 ---
 
