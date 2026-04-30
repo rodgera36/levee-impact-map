@@ -116,3 +116,6 @@ The app maps flood return periods to FEMA FIRM zone codes:
 
 These are regulatory zones — they represent the current mapped extents, not
 dynamically modeled flood depths. For custom depth grids, use the file upload.
+
+---
+## App development and code troubleshooting assisted by Claude.ai
